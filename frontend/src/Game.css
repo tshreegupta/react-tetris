@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-game-area {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(20, 30px);
+    border: 5px solid #34495e;
+    position: relative;
+    background-color: #34495e;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #2c3e50;
+    box-sizing: border-box;
+}
+
+.cell.I {
+    background-color: #00f0f0;
+    border: 3px outset #00f0f0;
+}
+
+.cell.J {
+    background-color: #0000f0;
+    border: 3px outset #0000f0;
+}
+
+.cell.L {
+    background-color: #f0a000;
+    border: 3px outset #f0a000;
+}
+
+.cell.O {
+    background-color: #f0f000;
+    border: 3px outset #f0f000;
+}
+
+.cell.S {
+    background-color: #00f000;
+    border: 3px outset #00f000;
+}
+
+.cell.T {
+    background-color: #a000f0;
+    border: 3px outset #a000f0;
+}
+
+.cell.Z {
+    background-color: #f00000;
+    border: 3px outset #f00000;
+}
+
+.game-info {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-card, .next-piece {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.next-piece {
+    margin-bottom: 20px;
+}
+
+.next-piece-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 20px);
+    grid-template-rows: repeat(4, 20px);
+    justify-content: center;
+}
+
+.next-piece-cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #2c3e50;
+    box-sizing: border-box;
+}
+
+.next-piece-cell.I {
+    background-color: #00f0f0;
+    border: 2px outset #00f0f0;
+}
+
+.next-piece-cell.J {
+    background-color: #0000f0;
+    border: 2px outset #0000f0;
+}
+
+.next-piece-cell.L {
+    background-color: #f0a000;
+    border: 2px outset #f0a000;
+}
+
+.next-piece-cell.O {
+    background-color: #f0f000;
+    border: 2px outset #f0f000;
+}
+
+.next-piece-cell.S {
+    background-color: #00f000;
+    border: 2px outset #00f000;
+}
+
+.next-piece-cell.T {
+    background-color: #a000f0;
+    border: 2px outset #a000f0;
+}
+
+.next-piece-cell.Z {
+    background-color: #f00000;
+    border: 2px outset #f00000;
+}
+
+.game-over-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    font-size: 0.5em;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 5px;
+}
