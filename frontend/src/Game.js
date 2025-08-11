@@ -49,7 +49,7 @@ const Game = () => {
 
     const fetchGameState = useCallback(async () => {
         try {
-            const res = await fetch('http://127.0.0.1:5000/game');
+            const res = await fetch('http://127.0.0.1:5001/game');
             const data = await res.json();
             setGameState(data);
         } catch (error) {
@@ -64,7 +64,7 @@ const Game = () => {
     const movePiece = async (direction) => {
         if (gameState && gameState.game_over) return;
         try {
-            await fetch('http://127.0.0.1:5000/move', {
+            await fetch('http://127.0.0.1:5001/move', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ direction })
@@ -78,7 +78,7 @@ const Game = () => {
     const rotatePiece = async () => {
         if (gameState && gameState.game_over) return;
         try {
-            await fetch('http://127.0.0.1:5000/rotate', { method: 'POST' });
+            await fetch('http://127.0.0.1:5001/rotate', { method: 'POST' });
             fetchGameState();
         } catch (error) {
             console.error("Failed to rotate piece:", error);
@@ -87,7 +87,7 @@ const Game = () => {
 
     const resetGame = async () => {
         try {
-            await fetch('http://127.0.0.1:5000/reset', { method: 'POST' });
+            await fetch('http://127.0.0.1:5001/reset', { method: 'POST' });
             fetchGameState();
         } catch (error) {
             console.error("Failed to reset game:", error);
